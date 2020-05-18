@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    text-align: center;
+  }
+
+  header{
+	background-color: burlywood;
+    height: 100pxl;
+    font-size: 16px;
+}
+body {
+    background-color: burlywood;
+}
+
+table {
+    background-color: black;
+    border-radius: 15px;
+    box-shadow: 0, 6px, 12px, rgba(0,0,0,0,23), 0 10px 40px rgba(0, 0, 0, 0.19);
+    margin: 15px auto 10px;
+    max-height: 100vh;
+    padding: 13px 10px 20px;
+    width: 85vw;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+    color: white;
+    margin-bottom: 30px;
+  }
