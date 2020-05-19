@@ -1,29 +1,305 @@
 *{
-    box-sizing: border-box;
-    margin: 0;
-    text-align: center;
-  }
-
-  header{
-	background-color: burlywood;
-    height: 100pxl;
-    font-size: 16px;
+  box-sizing: border-box;
+  margin: 0;
+  text-align: center;
 }
-body {
-    background-color: burlywood;
+header{
+	background-color: black;
+	height: 100pxl
 }
-
+h1, h2, h3, h4, p {
+  color: white;
+  font-family: 'Oswald', sans-serif;
+}
+h1 {
+  font-family: 'Lobster', cursive;
+  font-size: 5em;
+  font-weight: 900;
+}
+h2 {
+  font-size: 2.5em;
+  font-weight: 700;
+}
+h3 {
+  font-size: 2.125em;
+  font-weight: 500;
+}
+h4 {
+  font-size: 1.5em;
+  font-weight: 400;
+}
+p {
+  font-size: 1em;
+  font-weight: 400;
+}
+em {
+  text-decoration: none;
+  font-size: 1em;
+  font-style: italic;
+}
+div {
+  display: block;
+}
+section.full-width {
+  position: relative;
+  text-align:center;
+  box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+/* Nav */
+nav.fixed-side {
+  position: fixed;
+  top: 40vh;
+  right: 0;
+  z-index:10;
+  margin-right: 15px;
+}
+nav.fixed-side li {
+  list-style-type: none;
+  margin: 20px;
+}
+nav.fixed-side a {
+  color: white;  
+}
+nav.fixed-side a:active {
+  color: gray;
+}
+nav.top {
+  background: black;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  font-family: oswald;
+  font-size: 1.25em;
+  width: 100%;
+}
+nav.top a {
+  color: white;
+  text-decoration: none;
+  padding-left:5px;
+}
+nav.top li {
+  display: inline;
+  position: relative;
+  transition: all ease .3s;
+}
+nav.top li:hover {
+  background: darkgrey;
+}
+nav.top li::before {
+  content: "";
+  position: absolute;
+  top:4px;
+  left:0;
+  bottom:0;
+  border-left: solid 3px white;
+  height: 80%;
+}
+/* Logo */
+div.fp-logo-container {
+  position: absolute;
+  left: 0;
+  width: 50vw;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+div.fp-logo-container {
+  bottom:0;  
+}
+img.fp-logo {
+  width:200px;
+  vertical-align: middle;
+  transition: all ease-in-out 3s;
+}
+img.fp-logo:hover {
+  transform: rotate(1080deg);
+}
+div.top-logo-container {
+  display: inline-block;
+  padding: .75em;
+}
+div.top-logo-container img {
+  width:60px;
+  vertical-align: middle;
+}
+/* Text Style */
+div.fp-text-container, div.top-text-container {
+  display:inline-block;
+  vertical-align: middle;
+}
+div.fp-text-container h1 {
+  font-size: 5em;
+  border-bottom: solid 2px white;
+}
+div.fp-text-container h2 {
+  font-size: 1.5em;
+}
+div.top-text-container h1{
+  font-size: 2em;
+  border-bottom: solid 2px white;
+}
+div.top-text-container h2 {
+  font-size: .75em;
+}
+#about {
+  background: darkslategray;
+  height: 900px;
+}
+#sales {
+  background: black;
+  height: 250px;
+}
+/* Section 2 */
+section.full-width h3 {
+  text-align: center;
+  padding: 5px;
+  border-bottom: solid 1px white;
+  width: 25%;
+  margin: auto;
+}
+section.full-width p {
+  margin: 20px 25%;
+  line-height: 1.5em;  
+}
+/* Locaton */
+div.location-entry {
+  text-align: center;
+  display: inline-block;
+  margin: 12px;
+}
+div.location-entry img {
+  width: 400px;  
+  border: solid 10px #fbf9ee; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 3px;
+}
+div.location-entry a {
+  font-size: 2em;
+  color: white;
+  margin: 3px;
+}
+div.location-entry a:hover {
+  color: #5a4646;
+}
+div.location-entry h4 {
+  padding-top: 10px;
+  margin-bottom: 8px;
+}
+div.location-entry p {
+  margin: 8px;
+  line-height: inherit;
+}
+div.social-icons {
+  padding: 5px;
+}
+div.text-container {
+  margin-top: 15px;
+  position: absolute;
+  top: 45%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+}
+#sales a {
+  color: salmon;
+  margin: auto;
+}
+/* Table style */
 table {
-    background-color: black;
-    border-radius: 15px;
-    box-shadow: 0, 6px, 12px, rgba(0,0,0,0,23), 0 10px 40px rgba(0, 0, 0, 0.19);
-    margin: 15px auto 10px;
-    max-height: 100vh;
-    padding: 13px 10px 20px;
-    width: 85vw;
-    table-layout: fixed;
-    border-collapse: collapse;
-    border-spacing: 0;
-    color: white;
-    margin-bottom: 30px;
-  }
+  background-color: black;
+  border-radius: 15px;
+  box-shadow: 0, 6px, 12px, rgba(0,0,0,0,23), 0 10px 40px rgba(0, 0, 0, 0.19);
+  margin: 15px auto 10px;
+  max-height: 100vh;
+  padding: 13px 10px 20px;
+  width: 85vw;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: white;
+  margin-bottom: 30px;
+}
+table th {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .9em;
+  font-weight: 600;
+  padding: 10px;
+}
+
+table td {
+  border: 3px solid white;
+  padding:15px;
+}
+table tr:nth-child(even) {
+  background: gray; 
+}
+table tr:hover{
+	border: 3px solid black;
+	background: white;
+	color: black;
+}
+table thead tr:hover{
+	background: black;
+	color: white;
+}
+table th:hover {
+	border: 3px solid black;
+	color: white;
+}
+table tr:hover td {
+	border: 3px solid black;
+}
+table tr:nth-last-child(1) td:nth-last-child(1) {
+	background-color: burlywood;
+  border: solid 7px gold;
+  color: black;
+}
+#sales-graph {
+  background: darkgrey;
+  height: auto;
+  padding-top: 30px;
+}
+#add-shop {
+  background: gray;
+  height:auto;
+}
+.active {
+  color:gray;
+}
+/* Form */
+legend {
+  color: white;
+  font-family: oswald;
+  font-size: 1.2em;
+  text-align: center;
+  padding: 4px;
+}
+fieldset {
+  border: solid 5px white;
+  margin: auto;
+  width: 75%;
+  padding: 17px;
+  align-content: center;
+  border-radius: 7px;
+  word-spacing: 2px;
+}
+label {
+  display: block;
+  font-size: 1.1em;
+  font-family: oswald;
+  color: white;
+}
+button {
+  display: block;
+  margin: 0 auto;
+}
+label, input {
+  margin: 5px;
+}
+form {
+  margin-top: 25px;
+  padding-bottom: 15px;
+  width:80vw;
+  float: left;
+}
+

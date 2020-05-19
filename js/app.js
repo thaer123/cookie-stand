@@ -143,3 +143,12 @@ cookieShopForm.addEventListener('submit', addNewCookieShop);
 makeHeaderRow();
 renderallcookieshops();
 totalCookiesPerHour();
+
+
+//select style changer
+function changeStyle() {
+  var selecte=document.getElementById("selected");
+  var x=document.getElementsByTagName("p");
+var y=selecte.options[selecte.tabIndex].value="color";
+  }
+  // changeStyle();
