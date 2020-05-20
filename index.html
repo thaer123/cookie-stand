@@ -19,7 +19,8 @@
         <li><a href="./sales.html" >Sales</a></li>
 		<li><a href="./store.html">Shop</a></li>
         <li><a href="" >Ouer Pranches</a></li>
-		<li><a href="">About Us</a></li>
+    <li><a href="">About Us</a></li>
+    <li><a href="order-processing.html">order</a></li>
       </ul>
     </nav>
     <div class="fp-logo-container">
@@ -30,6 +31,8 @@
       </div>
     </div>
   </header>
+
+
   <section id="about" class="full-width"> 
     <div class="text-container">
 		<img src="img/salmon.png"></img>
@@ -47,15 +50,15 @@ Oat cake jelly beans brownie bear claw jujubes jujubes jujubes pastry. Pastry sw
       <a href="sales.html" title="Sales Data"><i class="fas fa-fish fa-10x"></i></a>
     <p>Click Fish!</p> -->
     
-    <select id="selected">
-      <option class="color">change my font color</option>
-      <option class="size">change my font size</option>
-      <option class="family">change my font family</option>
-     
+    
+    
+    <select name="list" onchange="changeStyle(this)">
+      <option value="green">change background to green</option>
+      <option value="black">change background to black</option>
+      <option value="blue">change background to blue</option>
     </select>
-    <br>
-    <button onclick="changeStyle()">apply font style</button>
+    
+    <!-- </section> -->
   
-  </section>
 </body>
 </html>

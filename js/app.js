@@ -18,12 +18,11 @@ function CookieShop(location, minCust, maxCust, cookiesPerSale) {
   allcookieshops.push(this);
 
 }
-//Testing Error on CookiesShop
-// debugger;
+//count the customer per hour
 CookieShop.prototype.custPerHr = function () {
   return Math.ceil(Math.random() * ((this.maxCust) - (this.minCust)) + this.minCust);
 };
-
+//count how much we sells cookies per hour
 CookieShop.prototype.cookiesPerHr = function () {
   return Math.round(this.cookiesPerSale * this.custPerHr());
 };
@@ -77,7 +76,8 @@ function makeHeaderRow() { // Table Header Row Function
   cookieshopTable.appendChild(theadElement);
 }
 
-function totalCookiesPerHour() { // Bottom Totals
+//hour totals in the taable 
+function totalCookiesPerHour() { 
   var trElement = document.createElement('tr');
   var thElement = document.createElement('th');
   thElement.textContent = 'Hourly Totals';
@@ -113,7 +113,7 @@ function renderallcookieshops() {
     allcookieshops[i].render();
   }
 }
-// code to add new shop 
+// code to add new shop to the table 
 function addNewCookieShop(event) {
   event.preventDefault();
   console.log(event);
@@ -122,13 +122,14 @@ function addNewCookieShop(event) {
   console.log
   // Get target of event 
   (event.target.shopLocation.value);
-  var newLoc = 
+  var newLoc = event.target.shopLocation.value;
+
   //The parseInt() function parses a string and returns an integer.
-  event.target.shopLocation.value;
+  
   var newMinCust = parseInt(event.target.minCust.value);
   var newMaxCust = parseInt(event.target.maxCust.value);
   var newCookiesPerSale = parseInt(event.target.cookiesPerSale.value);
-// New Keyword to call to function creates a new object
+// call function to creates a new object
   new CookieShop(newLoc, newMinCust, newMaxCust, newCookiesPerSale);
 
 // Access & Update text with TextContent to Table 
@@ -137,6 +138,14 @@ function addNewCookieShop(event) {
   renderallcookieshops();
   totalCookiesPerHour();
 }
+//select style changer
+function changeStyle(list) {
+  var selecte=list.options[list.selectedIndex].value;
+   document.body.style.backgroundColor=selecte;
+
+  }
+  //changeStyle();
+
 //Event Listener to Form
 cookieShopForm.addEventListener('submit', addNewCookieShop);
 
@@ -145,10 +154,3 @@ renderallcookieshops();
 totalCookiesPerHour();
 
 
-//select style changer
-function changeStyle() {
-  var selecte=document.getElementById("selected");
-  var x=document.getElementsByTagName("p");
-var y=selecte.options[selecte.tabIndex].value="color";
-  }
-  // changeStyle();

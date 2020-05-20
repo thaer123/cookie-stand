@@ -27,15 +27,31 @@
     </nav>
     </div>
   </header>
+   <!-- solve lab-09 -->
   <section id="add-shop" class="full-width sticky-nav">
     <div class="form">
       <form id="add-shop-form">
         <fieldset>
-    <!-- 34-48 -->
+          <legend>Add a New Store</legend>
+    
+          <label for="shopLocation">Shop Location: </label>
+          <input type="text" name="shopLocation">
+    
+          <label for="minCust">Minimum Customers per Hour: </label>
+          <input type="number" name="minCust">
+    
+          <label for="maxCust">Maximum Customers per Hour: </label>
+          <input type="number" name="maxCust">
+    
+          <label for="cookiesPerSale">Cookies per Sale</label>
+          <input type="number" name="cookiesPerSale" step="0.1">
+    
+          <button>Add a Store</button>
         </fieldset>
       </form>
     </div>
   </section>
+  <!--the table-->
   <section id="sales-graph" class="full-width">
     <h3>Cookies Sold</h3>
     <table id="cookies-sold"></table>
