@@ -1,0 +1,34 @@
+<html>
+  <head>
+<script>
+    function changeStyle(list) {
+  var selecte=list.options[list.selectedIndex].value;
+  document.body.style.backgroundColor=selecte;
+
+  }
+</script>
+</head>  
+<body>
+
+    <h1>Salmon Cookies and Coffee</h1>
+    <nav class="top">
+      <ul>
+        <li><a href="./index.html" >Home Page</a></li>
+        <li><a href="./sales.html" >Sales</a></li>
+		<li><a href="./store.html">Shop</a></li>
+        <li><a href="" >Ouer Pranches</a></li>
+    <li><a href="">About Us</a></li>
+    <li><a href="order-processing.html">order</a></li>
+      </ul>
+    </nav>
+    
+    <select name="list" onchange="changeStyle(this)">
+        <option value="green">change background to green</option>
+        <option value="black">change background to black</option>
+        <option value="blue">change background to blue</option>
+       
+      </select>
+      <br>
+      <!-- <button onclick="changeStyle(this)">apply font style</button> --> 
+</body>
+</html>
